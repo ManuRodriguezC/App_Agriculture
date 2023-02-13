@@ -1,5 +1,7 @@
+import 'package:app/UI/intray/new_users.dart';
 import 'package:app/models/widgets/global.dart';
 import 'package:flutter/material.dart';
+import 'package:app/UI/intray/new_users.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -88,11 +90,20 @@ class _LoginPageState extends State<LoginPage> {
                     ])),
             Container(
               child: Column(children: [Text("No tienes cuenta, unete!")]),
-            )
+            ),
+            MaterialButton(
+                onPressed: () {
+                  _newUsers(context);
+                },
+                child: Text("Registrate"))
           ],
         ),
       ),
-      backgroundColor: Color(0xFF212128),
+      backgroundColor: darkGreyColor,
     );
+  }
+
+  void _newUsers(BuildContext context) {
+    Navigator.of(context).pushNamed("/newUsers");
   }
 }

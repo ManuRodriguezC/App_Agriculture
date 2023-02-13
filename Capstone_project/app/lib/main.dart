@@ -1,4 +1,5 @@
 import 'package:app/UI/Login/loginscreen.dart';
+import 'package:app/UI/intray/new_users.dart';
 import 'package:flutter/material.dart';
 import 'UI/intray/intrayscreen.dart';
 
@@ -12,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LoginPage(),
-    );
+        title: 'Exporting Agriculture',
+        initialRoute: "/",
+        routes: {
+          "/": (BuildContext context) => LoginPage(),
+          "/newUsers": (BuildContext context) => NewUsers(),
+        });
   }
 }
