@@ -1,3 +1,4 @@
+import 'package:app/UI/Login/loginscreen.dart';
 import 'package:app/bloc/blocs/user_bloc.dart';
 import 'package:app/models/widgets/global.dart';
 import 'package:flutter/material.dart';
@@ -266,16 +267,18 @@ class _NewUsers extends State<NewUsers> {
                           emailbuyerController.text != null ||
                           passwordbuyerController.text != null ||
                           password2buyerController != null) {
-                        buyerBloc.registerBuyer(
-                            usernamebuyerController.text,
-                            firstnamebuyerController.text,
-                            lastnamebuyerController.text,
-                            companybuyerController.text,
-                            nitbuyerController.text,
-                            addressbuyerController.text,
-                            phonenumberbuyerController.text,
-                            emailbuyerController.text,
-                            passwordbuyerController.text);
+                        buyerBloc
+                            .registerBuyer(
+                                usernamebuyerController.text,
+                                firstnamebuyerController.text,
+                                lastnamebuyerController.text,
+                                companybuyerController.text,
+                                nitbuyerController.text,
+                                addressbuyerController.text,
+                                phonenumberbuyerController.text,
+                                emailbuyerController.text,
+                                passwordbuyerController.text)
+                            .then(_loginPage(context));
                       }
                     },
                     child: Text(
@@ -523,25 +526,28 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   MaterialButton(
                     onPressed: () {
-                      if (usernamebuyerController.text != null ||
-                          firstnamebuyerController.text != null ||
-                          lastnamebuyerController.text != null ||
-                          addressbuyerController.text != null ||
-                          phonenumberbuyerController.text != null ||
-                          emailbuyerController.text != null ||
-                          passwordbuyerController.text != null ||
-                          password2buyerController != null) {
-                        sellerBloc.registerSeller(
-                            usernamebuyerController.text,
-                            firstnamebuyerController.text,
-                            lastnamebuyerController.text,
-                            companybuyerController.text,
-                            nitbuyerController.text,
-                            addressbuyerController.text,
-                            phonenumberbuyerController.text,
-                            emailbuyerController.text,
-                            productssellerController.text,
-                            passwordbuyerController.text);
+                      if (usernamesellerController.text != null ||
+                          firstnamesellerController.text != null ||
+                          lastnamesellerController.text != null ||
+                          addresssellerController.text != null ||
+                          phonenumbersellerController.text != null ||
+                          emailsellerController.text != null ||
+                          productssellerController.text != null ||
+                          passwordsellerController.text != null ||
+                          password2sellerController != null) {
+                        sellerBloc
+                            .registerSeller(
+                                usernamesellerController.text,
+                                firstnamesellerController.text,
+                                lastnamesellerController.text,
+                                companysellerController.text,
+                                nitsellerController.text,
+                                addresssellerController.text,
+                                phonenumbersellerController.text,
+                                emailsellerController.text,
+                                productssellerController.text,
+                                passwordsellerController.text)
+                            .then((_loginPage(context)));
                       }
                     },
                     child: Text(
@@ -573,5 +579,9 @@ class _NewUsers extends State<NewUsers> {
         backgroundColor: darkGreyColor,
       ),
     )));
+  }
+
+  void _loginPage(BuildContext context) {
+    Navigator.of(context).pushNamed("/");
   }
 }

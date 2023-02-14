@@ -53,7 +53,7 @@ class ApiProvider {
       String email,
       String password) async {
     final response =
-        await client.post("http://127.0.0.1:5000/api/registerseller",
+        await client.post("http://127.0.0.1:5000/api/registerbuyer",
             body: jsonEncode({
               "username": username,
               "firstname": firstname,
