@@ -3,6 +3,8 @@ import 'package:app/bloc/blocs/user_bloc.dart';
 import 'package:app/models/widgets/global.dart';
 import 'package:flutter/material.dart';
 
+import '../../models/widgets/LoginTop.dart';
+
 class NewUsers extends StatefulWidget {
   const NewUsers();
 
@@ -42,9 +44,25 @@ class _NewUsers extends State<NewUsers> {
       // ignore: unnecessary_new
       child: new Scaffold(
         body: Stack(children: [
+          CustomPaint(
+            size: Size(double.infinity, 120),
+            painter: RPSCustomPainter(),
+          ),
+          CustomPaint(
+            size: Size(double.infinity, 120),
+            painter: LoginCustomPainter(),
+          ),
+          CustomPaint(
+            size: Size(double.infinity, 120),
+            painter: smallCustomPainter(),
+          ),
+          CustomPaint(
+            size: Size(double.infinity, 120),
+            painter: circleCustomPainter(),
+          ),
           TabBarView(children: [
             Container(
-              margin: EdgeInsets.all(40),
+              margin: EdgeInsets.only(bottom: 40, left: 40, right: 40, top: 90),
               child: Form(
                 child: ListView(children: [
                   TextFormField(
@@ -53,7 +71,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Usuario',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -74,7 +92,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Nombre',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -95,7 +113,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Apellido',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -116,7 +134,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Empresa',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -137,7 +155,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'NIT',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -158,7 +176,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Direccion',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -179,7 +197,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Telefono',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -200,7 +218,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Email',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -221,7 +239,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Contraseña',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -242,7 +260,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Confirmar Contraseña',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -299,7 +317,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Usuario',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -320,7 +338,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Nombre',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -341,7 +359,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Apellido',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -362,7 +380,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Empresa',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -383,7 +401,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'NIT',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -404,7 +422,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Direccion',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -425,7 +443,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Telefono',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -446,7 +464,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Email',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -467,7 +485,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Productos',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -488,7 +506,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Contraseña',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -509,7 +527,7 @@ class _NewUsers extends State<NewUsers> {
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.green[50],
                       hintText: 'Confirmar Contraseña',
                       contentPadding: const EdgeInsets.only(
                           left: 14.0, bottom: 8.0, top: 8.0),
@@ -574,9 +592,9 @@ class _NewUsers extends State<NewUsers> {
             ],
             labelColor: Colors.green,
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: const Color.fromARGB(255, 155, 206, 150),
         ),
-        backgroundColor: darkGreyColor,
+        backgroundColor: Colors.white,
       ),
     )));
   }
