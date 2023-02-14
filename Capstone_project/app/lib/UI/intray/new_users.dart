@@ -10,17 +10,27 @@ class NewUsers extends StatefulWidget {
 }
 
 class _NewUsers extends State<NewUsers> {
-  TextEditingController usernameController = TextEditingController();
-  TextEditingController firstnameController = TextEditingController();
-  TextEditingController lastnameController = TextEditingController();
-  TextEditingController companyController = TextEditingController();
-  TextEditingController nitController = TextEditingController();
-  TextEditingController addressController = TextEditingController();
-  TextEditingController phonenumberController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController productsController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController password2Controller = TextEditingController();
+  TextEditingController usernamebuyerController = TextEditingController();
+  TextEditingController firstnamebuyerController = TextEditingController();
+  TextEditingController lastnamebuyerController = TextEditingController();
+  TextEditingController companybuyerController = TextEditingController();
+  TextEditingController nitbuyerController = TextEditingController();
+  TextEditingController addressbuyerController = TextEditingController();
+  TextEditingController phonenumberbuyerController = TextEditingController();
+  TextEditingController emailbuyerController = TextEditingController();
+  TextEditingController passwordbuyerController = TextEditingController();
+  TextEditingController password2buyerController = TextEditingController();
+  TextEditingController usernamesellerController = TextEditingController();
+  TextEditingController firstnamesellerController = TextEditingController();
+  TextEditingController lastnamesellerController = TextEditingController();
+  TextEditingController companysellerController = TextEditingController();
+  TextEditingController nitsellerController = TextEditingController();
+  TextEditingController addresssellerController = TextEditingController();
+  TextEditingController phonenumbersellerController = TextEditingController();
+  TextEditingController emailsellerController = TextEditingController();
+  TextEditingController productssellerController = TextEditingController();
+  TextEditingController passwordsellerController = TextEditingController();
+  TextEditingController password2sellerController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +48,7 @@ class _NewUsers extends State<NewUsers> {
                 child: ListView(children: [
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: usernameController,
+                    controller: usernamebuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -59,7 +69,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: firstnameController,
+                    controller: firstnamebuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -80,7 +90,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: lastnameController,
+                    controller: lastnamebuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -101,7 +111,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: companyController,
+                    controller: companybuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -122,7 +132,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: nitController,
+                    controller: nitbuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -143,7 +153,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: addressController,
+                    controller: addressbuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -164,7 +174,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: phonenumberController,
+                    controller: phonenumberbuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -185,7 +195,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: emailController,
+                    controller: emailbuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -206,7 +216,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: passwordController,
+                    controller: passwordbuyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -227,7 +237,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: password2Controller,
+                    controller: password2buyerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -248,28 +258,30 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   MaterialButton(
                     onPressed: () {
-                      if (usernameController.text != null ||
-                          firstnameController.text != null ||
-                          lastnameController.text != null ||
-                          addressController.text != null ||
-                          phonenumberController.text != null ||
-                          emailController.text != null ||
-                          passwordController.text != null ||
-                          password2Controller != null) {
-                        sellerBloc.registerSeller(
-                            usernameController.text,
-                            firstnameController.text,
-                            lastnameController.text,
-                            lastnameController.text,
-                            companyController.text,
-                            nitController.text,
-                            addressController.text,
-                            phonenumberController.text,
-                            emailController.text,
-                            passwordController.text);
+                      if (usernamebuyerController.text != null ||
+                          firstnamebuyerController.text != null ||
+                          lastnamebuyerController.text != null ||
+                          addressbuyerController.text != null ||
+                          phonenumberbuyerController.text != null ||
+                          emailbuyerController.text != null ||
+                          passwordbuyerController.text != null ||
+                          password2buyerController != null) {
+                        buyerBloc.registerBuyer(
+                            usernamebuyerController.text,
+                            firstnamebuyerController.text,
+                            lastnamebuyerController.text,
+                            companybuyerController.text,
+                            nitbuyerController.text,
+                            addressbuyerController.text,
+                            phonenumberbuyerController.text,
+                            emailbuyerController.text,
+                            passwordbuyerController.text);
                       }
                     },
-                    child: Text("Crear"),
+                    child: Text(
+                      "Registrase",
+                      style: TextStyle(color: Colors.green),
+                    ),
                   )
                 ]),
               ),
@@ -280,7 +292,7 @@ class _NewUsers extends State<NewUsers> {
                 child: ListView(children: [
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: usernameController,
+                    controller: usernamesellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -301,7 +313,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: firstnameController,
+                    controller: firstnamesellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -322,7 +334,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: lastnameController,
+                    controller: lastnamesellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -343,7 +355,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: companyController,
+                    controller: companysellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -364,7 +376,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: nitController,
+                    controller: nitsellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -385,7 +397,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: addressController,
+                    controller: addresssellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -406,7 +418,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: phonenumberController,
+                    controller: phonenumbersellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -427,7 +439,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: emailController,
+                    controller: emailsellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -448,7 +460,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: productsController,
+                    controller: productssellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -469,7 +481,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: passwordController,
+                    controller: passwordsellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -490,7 +502,7 @@ class _NewUsers extends State<NewUsers> {
                   SizedBox(height: 15),
                   TextFormField(
                     textAlign: TextAlign.center,
-                    controller: password2Controller,
+                    controller: password2sellerController,
                     style: TextStyle(fontSize: 22.0, color: Colors.grey),
                     decoration: InputDecoration(
                       filled: true,
@@ -508,6 +520,35 @@ class _NewUsers extends State<NewUsers> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 15),
+                  MaterialButton(
+                    onPressed: () {
+                      if (usernamebuyerController.text != null ||
+                          firstnamebuyerController.text != null ||
+                          lastnamebuyerController.text != null ||
+                          addressbuyerController.text != null ||
+                          phonenumberbuyerController.text != null ||
+                          emailbuyerController.text != null ||
+                          passwordbuyerController.text != null ||
+                          password2buyerController != null) {
+                        sellerBloc.registerSeller(
+                            usernamebuyerController.text,
+                            firstnamebuyerController.text,
+                            lastnamebuyerController.text,
+                            companybuyerController.text,
+                            nitbuyerController.text,
+                            addressbuyerController.text,
+                            phonenumberbuyerController.text,
+                            emailbuyerController.text,
+                            productssellerController.text,
+                            passwordbuyerController.text);
+                      }
+                    },
+                    child: Text(
+                      "Registrase",
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  )
                 ]),
               ),
             ),

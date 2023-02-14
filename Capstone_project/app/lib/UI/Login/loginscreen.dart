@@ -95,7 +95,10 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   _newUsers(context);
                 },
-                child: Text("Registrate"))
+                child: Text(
+                  "Registrate",
+                  style: TextStyle(color: Colors.green),
+                ))
           ],
         ),
       ),
