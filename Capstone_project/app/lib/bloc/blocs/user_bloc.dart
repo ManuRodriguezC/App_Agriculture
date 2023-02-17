@@ -7,6 +7,7 @@ import 'package:app/models/clasees/buyer.dart';
 class SellerBloc {
   final _repoditory = Repository();
   final _userGetter = PublishSubject<Seller>();
+  final _sellersSubject = BehaviorSubject<List<Seller>>();
 
   Observable<Seller> get getSeller => _userGetter.stream;
 
@@ -35,9 +36,16 @@ class SellerBloc {
     _userGetter.sink.add(seller);
   }
 
+  getUserTask() async {
+    Seller seller = await _repoditory.getSellers();
+    _userGetter.sink.add(seller);
+  }
+
   dispose() {
     _userGetter.close();
   }
+
+  Stream<List<Seller>> get getSellers => _sellersSubject.stream;
 }
 
 class BuyerBloc {

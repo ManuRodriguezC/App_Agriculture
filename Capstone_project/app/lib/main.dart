@@ -2,6 +2,7 @@ import 'package:app/UI/Login/loginscreen.dart';
 import 'package:app/UI/intray/new_users.dart';
 import 'package:flutter/material.dart';
 import 'UI/intray/intrayscreen.dart';
+import 'UI/intray/listUsers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         routes: {
           "/": (BuildContext context) => LoginPage(),
           "/newUsers": (BuildContext context) => NewUsers(),
+          "/usersView": (BuildContext context) => usersView()
         });
   }
 }

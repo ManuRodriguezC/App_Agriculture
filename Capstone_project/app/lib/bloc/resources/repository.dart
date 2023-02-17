@@ -32,4 +32,6 @@ class Repository {
           String password) =>
       apiProvider.registerBuyer(username, firstname, lastname, company, NIT,
           address, phonenumber, email, password);
+
+  Future getSellers() => apiProvider.getSellers();
 }

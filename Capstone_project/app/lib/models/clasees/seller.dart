@@ -29,7 +29,7 @@ class Seller {
       this.password,
       this.api_key);
 
-  factory Seller.fromJson(Map<String, dynamic> parsedJson) {
+  factory Seller.fromJson(Map<dynamic, dynamic> parsedJson) {
     return Seller(
         parsedJson['id'],
         parsedJson['username'],

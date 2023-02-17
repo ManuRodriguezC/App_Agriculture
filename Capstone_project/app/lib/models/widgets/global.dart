@@ -7,4 +7,16 @@ TextStyle loginTitle = const TextStyle(
     fontFamily: 'Avenir',
     fontWeight: FontWeight.bold,
     color: Colors.green,
-    fontSize: 30);
+    fontSize: 50);
+
+TextStyle userName = const TextStyle(
+    fontFamily: 'Avenir',
+    fontWeight: FontWeight.bold,
+    color: Colors.blue,
+    fontSize: 20);
+
+TextStyle userInformation = const TextStyle(
+    fontFamily: 'Avenir',
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
+    fontSize: 15);

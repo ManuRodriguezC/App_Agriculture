@@ -74,6 +74,26 @@ class ApiProvider {
     }
   }
 
+  Future<List<Seller>> getSellers() async {
+    final response =
+        await client.get("http://127.0.0.1:5000/api/registerseller");
+
+    final Map result = json.decode(response.body);
+    if (response.statusCode == 200) {
+      List<Seller> sellers = [];
+
+      for (Map items in result["data"]) {
+        sellers.add(Seller.fromJson(items));
+      }
+      for (Seller sell in sellers) {
+        print(sell.username);
+      }
+      return sellers;
+    } else {
+      throw Exception("Failed to load dates");
+    }
+  }
+
   saveApiKey(String api_key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('API_TOKEN', api_key);
