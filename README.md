@@ -58,16 +58,19 @@ The app works as a list of potential sellers and buyers, to access this list you
 <h3>Manuel E. Rodriguez C.</h3>
 
 [- Linkedin](https://img1.freepng.es/20180215/yaq/kisspng-t-shirt-face-smiley-clip-art-shocked-happy-face-5a85f6bd06d3e4.287266511518728893028.jpg)
+
 [- Github](https://img1.freepng.es/20180215/yaq/kisspng-t-shirt-face-smiley-clip-art-shocked-happy-face-5a85f6bd06d3e4.287266511518728893028.jpg)
 
 <h3>Daniel S. Lopez O.</h3>
 
 [- Linkedin](https://www.linkedin.com/in/daniel-santiago-lopez-ortigoza-973284267/)
+
 [- Github](https://github.com/Danielxxdxdxd)
 
 <h3>Nicolas Cuevas</h3>
 
 [- Linkedin](https://img1.freepng.es/20180215/yaq/kisspng-t-shirt-face-smiley-clip-art-shocked-happy-face-5a85f6bd06d3e4.287266511518728893028.jpg)
+
 [- Github](https://github.com/nicolas1897)
 
 </p>
