@@ -29,7 +29,7 @@ Create an app that efficiently connects a farmer who wants to sell his products 
 
 </details>
 
-<details><summary> Description of the App </summary>
+<details><summary> Use the App </summary>
 
 <p>
 
