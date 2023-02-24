@@ -4,10 +4,13 @@ import 'package:app/models/clasees/seller.dart';
 import 'package:app/models/clasees/buyer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// This class call and conect with the api.
+
 class ApiProvider {
   Client client = Client();
   final _apiKey = '';
 
+  // This future function create a new user and save in the api/registerseller
   Future<Seller> registerSeller(
       String username,
       String firstname,
@@ -34,6 +37,7 @@ class ApiProvider {
               "password": password
             }));
     final Map result = json.decode(response.body);
+    // if the conect and create user is success, save and return of json format.
     if (response.statusCode == 201) {
       await saveApiKey(result["data"]["api_key"]);
       return Seller.fromJson(result["data"]);
@@ -42,6 +46,7 @@ class ApiProvider {
     }
   }
 
+  // This future function create a new user and save in the api/registerbuyer
   Future<Buyer> registerBuyer(
       String username,
       String firstname,
@@ -66,6 +71,8 @@ class ApiProvider {
               "password": password
             }));
     final Map result = json.decode(response.body);
+
+    // if the conect and create user is success, save and return of json format.
     if (response.statusCode == 201) {
       await saveApiKey(result["data"]["api_key"]);
       return Buyer.fromJson(result["data"]);

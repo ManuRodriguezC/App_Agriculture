@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app/UI/intray/intrayscreen.dart';
 import 'package:app/UI/intray/new_users.dart';
 import 'package:app/bloc/blocs/user_bloc.dart';
@@ -7,6 +9,8 @@ import 'package:app/UI/intray/new_users.dart';
 import 'package:app/bloc/resources/api.dart';
 import '../../models/widgets/LoginTop.dart';
 
+// This function create the login page.
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -15,8 +19,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController usernameText = new TextEditingController();
-  TextEditingController passwordText = new TextEditingController();
+  TextEditingController usernameText =
+      new TextEditingController(); // This variable save the username of the user inside in the login page
+  TextEditingController passwordText =
+      new TextEditingController(); // This variable save the password of the user inside in the login page
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +31,7 @@ class _LoginPageState extends State<LoginPage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
+          // ignore: sort_child_properties_last
           child: Stack(children: [
             CustomPaint(
               size: Size(double.infinity, 200),
@@ -125,8 +132,9 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           ])),
                   Container(
+                    // ignore: prefer_const_literals_to_create_immutables
                     child: Column(children: [
-                      Text("No tienes cuenta, unete!",
+                      const Text("No tienes cuenta, unete!",
                           style: TextStyle(fontWeight: FontWeight.w400))
                     ]),
                   ),
@@ -153,10 +161,12 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  // This function call the page of the new user
   void _newUsers(BuildContext context) {
     Navigator.of(context).pushNamed("/newUsers");
   }
 
+  // This function call the page of the all usrrs register in the app
   void _usersView(BuildContext context) {
     Navigator.of(context).pushNamed("/usersView");
   }
@@ -166,6 +176,7 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
   }
 
+  // This function write the message of the user when login is success
   void _showDialogBox(BuildContext context) {
     showDialog(
         context: context,
@@ -173,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
           return AlertDialog(
             title: Text("BIENVENIDO"),
             content: Text(
-                "Espereramos que disfrute de esta aplicacion y que encuentre lo que quiere comprar"),
+                "Espereramos que disfrute de esta aplicacion y que encuentre lo que quiere comprar o vender"),
             actions: [
               TextButton(
                   onPressed: () {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+// Create the class of the seller with all dates requeriments
 class Seller {
   int id;
   String username;

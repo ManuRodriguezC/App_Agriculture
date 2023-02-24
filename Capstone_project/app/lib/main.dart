@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'UI/intray/intrayscreen.dart';
 import 'UI/intray/listUsers.dart';
 
+// This function run the app
 void main() {
   runApp(const MyApp());
 }
@@ -11,15 +12,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // Contein all page of the app and routes
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Exporting Agriculture',
-        initialRoute: "/",
-        routes: {
-          "/": (BuildContext context) => LoginPage(),
-          "/newUsers": (BuildContext context) => NewUsers(),
-          "/usersView": (BuildContext context) => usersView()
-        });
+    return MaterialApp(title: 'Linkding Farmes', initialRoute: "/", routes: {
+      "/": (BuildContext context) => LoginPage(),
+      "/newUsers": (BuildContext context) => NewUsers(),
+      "/usersView": (BuildContext context) => usersView()
+    });
   }
 }

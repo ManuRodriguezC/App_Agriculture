@@ -3,6 +3,7 @@ import 'package:app/models/clasees/seller.dart';
 import 'package:app/models/clasees/seller.dart';
 import 'package:app/models/clasees/buyer.dart';
 
+// This class connect the class of the users with the correct format in the api.
 class Repository {
   final apiProvider = ApiProvider();
 

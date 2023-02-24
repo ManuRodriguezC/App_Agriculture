@@ -4,6 +4,7 @@ import 'package:app/models/widgets/global.dart';
 import 'package:flutter/material.dart';
 import '../../models/widgets/LoginTop.dart';
 
+// This function create the page of the view all users register.
 class usersView extends StatefulWidget {
   const usersView();
 
@@ -22,71 +23,71 @@ class _usersView extends State<usersView> {
       child: new Scaffold(
         body: Stack(children: [
           CustomPaint(
-            size: Size(double.infinity, 120),
+            size: const Size(double.infinity, 120),
             painter: RPSCustomPainter(),
           ),
           CustomPaint(
-            size: Size(double.infinity, 120),
+            size: const Size(double.infinity, 120),
             painter: LoginCustomPainter(),
           ),
           CustomPaint(
-            size: Size(double.infinity, 120),
+            size: const Size(double.infinity, 120),
             painter: smallCustomPainter(),
           ),
           CustomPaint(
-            size: Size(double.infinity, 120),
+            size: const Size(double.infinity, 120),
             painter: circleCustomPainter(),
           ),
           TabBarView(children: [
             Container(
-                margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                margin: const EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: ListView(
                   children: [
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        SizedBox(height: 60),
+                        const SizedBox(height: 60),
                         buyerInfo(
-                            "Flowers Colombia",
-                            "Juan Carlos",
-                            "Restrepo",
-                            "Flowers Colombia",
-                            "1.124.452.987",
-                            "3147845698",
-                            "Calle 127 # 54-74 Bogota",
-                            "flowers.colombia@gmail.com"),
-                        SizedBox(height: 20),
+                            "Sunshine",
+                            "Camila",
+                            "Quintero Restrepo",
+                            "Sunshine S.A.S",
+                            "12.451.689.2.",
+                            "3102163134",
+                            "Madrid - Calle 2 # 24-12",
+                            "sunshine.colombia@gmail.com"),
+                        const SizedBox(height: 20),
                         buyerInfo(
-                            "Elite Flowers",
-                            "Carlos",
-                            "Caicedo",
-                            "Elite Flowers",
-                            "45.145.145",
-                            "3194867486",
-                            "Calle 12 # 24-67 Facatativa",
-                            "eliteflowers@gmail.com"),
-                        SizedBox(height: 20),
+                            "Colombia Flowers",
+                            "Jorge",
+                            "Caicedo Gomez",
+                            "Colombia Flowers",
+                            "41.865.785",
+                            "3194412486",
+                            "Avenida 26 # 34 - 14",
+                            "colombiaflowers@gmail.com"),
+                        const SizedBox(height: 20),
                         buyerInfo(
-                            "El renacer",
-                            "Ernesto",
-                            "Rodriguez",
-                            "Green",
-                            "12.452.478.4",
-                            "3102154867",
-                            "Puente piedra - Madrid",
-                            "green.flowers@gmail.com")
+                            "Mundo Verde",
+                            "Katerine",
+                            "Castro Jimenez",
+                            "Mundo Verde",
+                            "121.785.986",
+                            "3142567896",
+                            "Tres esquinas 14 - 46 - Madrid",
+                            "mundoverde@gmail.com")
                       ],
                     )
                   ],
                 )),
             Container(
-                margin: EdgeInsets.only(left: 20, top: 20, right: 20),
+                margin: const EdgeInsets.only(left: 20, top: 20, right: 20),
                 child: ListView(
                   children: [
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        SizedBox(height: 60),
+                        const SizedBox(height: 60),
                         sellerInfo(
                             "Flowers Colombia",
                             "Juan Carlos",
@@ -97,7 +98,7 @@ class _usersView extends State<usersView> {
                             "Calle 127 # 54-74 Bogota",
                             "flowers.colombia@gmail.com",
                             "Rosas, Ruscus"),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         sellerInfo(
                             "Elite Flowers",
                             "Carlos",
@@ -108,7 +109,7 @@ class _usersView extends State<usersView> {
                             "Calle 12 # 24-67 Facatativa",
                             "eliteflowers@gmail.com",
                             "Claveles, Eucalipto, Coculus"),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         sellerInfo(
                             "El renacer",
                             "Ernesto",
@@ -118,7 +119,18 @@ class _usersView extends State<usersView> {
                             "3102154867",
                             "Puente piedra - Madrid",
                             "green.flowers@gmail.com",
-                            "Helecho, Brillantina, Ruscus")
+                            "Helecho, Brillantina, Ruscus"),
+                        const SizedBox(height: 20),
+                        sellerInfo(
+                            "Grupo Chia",
+                            "Martha Cecilia",
+                            "Ayala Ruiz",
+                            "Grupo Chia S.A.S",
+                            "33.224.537",
+                            "3005443821",
+                            "Chia - Calle 24 - 34",
+                            "grupochia@gmail.com",
+                            "Rosas, Astromelia, Aralia")
                       ],
                     )
                   ],
@@ -149,6 +161,7 @@ class _usersView extends State<usersView> {
     )));
   }
 
+  // This widget create the drawer in the page, this contain differents bottons with functions, exit, home, and edite dates.
   Widget _allDrawer(BuildContext context) {
     return Drawer(
         backgroundColor: Colors.green[50],
@@ -176,14 +189,17 @@ class _usersView extends State<usersView> {
         ));
   }
 
+  // This function back of the login page
   void _loginPage(BuildContext context) {
     Navigator.of(context).pushNamed("/");
   }
 
+  // This function call the list of the users, buyers and sellers
   void _listView(BuildContext context) {
     Navigator.of(context).pushNamed("/usersView");
   }
 
+  // This widget create the structure or format of the any buyers register.
   Widget buyerInfo(
       String username,
       String firstname,
@@ -194,7 +210,7 @@ class _usersView extends State<usersView> {
       String address,
       String email) {
     return Container(
-        height: 200,
+        height: 250,
         width: 300,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -209,11 +225,14 @@ class _usersView extends State<usersView> {
             Text("Telefono: $numberphone", style: userInformation),
             Text("Nit: $nit", style: userInformation),
             Text("Direccion: $address", style: userInformation),
-            Text("Email: $email", style: userInformation)
+            Text("Email: $email", style: userInformation),
+            IconButton(onPressed: () {}, icon: Icon(Icons.chat, size: 40)),
+            SizedBox(height: 5)
           ],
         ));
   }
 
+  // This widget create the structure or format of the any sellers register.
   Widget sellerInfo(
       String username,
       String firstname,
@@ -225,7 +244,7 @@ class _usersView extends State<usersView> {
       String email,
       String productos) {
     return Container(
-        height: 240,
+        height: 310,
         width: 300,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -250,8 +269,9 @@ class _usersView extends State<usersView> {
               style: userName,
             ),
             SizedBox(height: 5),
-            Text("$productos"),
-            SizedBox(height: 10)
+            Text("$productos", style: TextStyle(fontSize: 20)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.chat, size: 40)),
+            SizedBox(height: 5),
           ],
         ));
   }

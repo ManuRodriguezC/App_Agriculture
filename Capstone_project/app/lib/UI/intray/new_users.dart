@@ -2,8 +2,9 @@ import 'package:app/UI/Login/loginscreen.dart';
 import 'package:app/bloc/blocs/user_bloc.dart';
 import 'package:app/models/widgets/global.dart';
 import 'package:flutter/material.dart';
-
 import '../../models/widgets/LoginTop.dart';
+
+// This function create the page of the new users and create the format with dates of the user.
 
 class NewUsers extends StatefulWidget {
   const NewUsers();
@@ -13,8 +14,10 @@ class NewUsers extends StatefulWidget {
 }
 
 class _NewUsers extends State<NewUsers> {
-  TextEditingController usernamebuyerController = TextEditingController();
-  TextEditingController firstnamebuyerController = TextEditingController();
+  TextEditingController usernamebuyerController =
+      TextEditingController(); // Variable that save the username of the buyer
+  TextEditingController firstnamebuyerController =
+      TextEditingController(); // Variable that save the firstname of the buyer
   TextEditingController lastnamebuyerController = TextEditingController();
   TextEditingController companybuyerController = TextEditingController();
   TextEditingController nitbuyerController = TextEditingController();
@@ -46,48 +49,48 @@ class _NewUsers extends State<NewUsers> {
           child: new Scaffold(
             body: Stack(children: [
               CustomPaint(
-                size: Size(double.infinity, 120),
+                size: const Size(double.infinity, 120),
                 painter: RPSCustomPainter(),
               ),
               CustomPaint(
-                size: Size(double.infinity, 120),
+                size: const Size(double.infinity, 120),
                 painter: LoginCustomPainter(),
               ),
               CustomPaint(
-                size: Size(double.infinity, 120),
+                size: const Size(double.infinity, 120),
                 painter: smallCustomPainter(),
               ),
               CustomPaint(
-                size: Size(double.infinity, 120),
+                size: const Size(double.infinity, 120),
                 painter: circleCustomPainter(),
               ),
               TabBarView(children: [
                 Container(
-                  margin:
-                      EdgeInsets.only(bottom: 40, left: 40, right: 40, top: 90),
+                  margin: const EdgeInsets.only(
+                      bottom: 40, left: 40, right: 40, top: 90),
                   child: Form(
                     child: ListView(children: [
                       infoUsers("Usuario", usernamebuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Nombre", firstnamebuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Apellido", lastnamebuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Empresa", companybuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("NIT", nitbuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Direccion", addressbuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Telefono", phonenumberbuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Email", emailbuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers('Contraseña', passwordbuyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers(
                           'Confirmar Contraseña', password2buyerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       MaterialButton(
                         onPressed: () {
                           if (usernamebuyerController.text != null ||
@@ -112,7 +115,7 @@ class _NewUsers extends State<NewUsers> {
                                 .then(_showDialogBox(context));
                           }
                         },
-                        child: Text(
+                        child: const Text(
                           "Registrase",
                           style: TextStyle(color: Colors.green, fontSize: 20),
                         ),
@@ -121,32 +124,32 @@ class _NewUsers extends State<NewUsers> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.all(40),
+                  margin: const EdgeInsets.all(40),
                   child: Form(
                     child: ListView(children: [
                       infoUsers("Usuario", usernamesellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Nombre", firstnamesellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Apellido", lastnamesellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Empresa", companysellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("NIT", nitsellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Direccion", addresssellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Telefono", phonenumbersellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers("Email", emailsellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers('Productos', productssellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers('Contraseña', passwordsellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       infoUsers(
                           'Confirmar Contraseña', password2sellerController),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       MaterialButton(
                         onPressed: () {
                           if (usernamesellerController.text != null ||
@@ -173,7 +176,7 @@ class _NewUsers extends State<NewUsers> {
                                 .then((_showDialogBox(context)));
                           }
                         },
-                        child: Text(
+                        child: const Text(
                           "Registrase",
                           style: TextStyle(color: Colors.green, fontSize: 20),
                         ),
@@ -210,11 +213,12 @@ class _NewUsers extends State<NewUsers> {
     Navigator.of(context).pushNamed("/usersView");
   }
 
+  // This widget create the format of the any data that user inside.
   Widget infoUsers(String data, TextEditingController info) {
     return TextFormField(
       textAlign: TextAlign.center,
       controller: info,
-      style: TextStyle(fontSize: 22.0, color: Colors.grey),
+      style: const TextStyle(fontSize: 22.0, color: Colors.grey),
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.green[50],
@@ -233,19 +237,21 @@ class _NewUsers extends State<NewUsers> {
     );
   }
 
+  // This function write the message of the user when login is success
   void _showDialogBox(BuildContext context) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("BIENVENIDO"),
-            content: Text("Tu registro fue exitoso! Haz clic para continuar"),
+            title: const Text("BIENVENIDO"),
+            content:
+                const Text("Tu registro fue exitoso! Haz clic para continuar"),
             actions: [
               TextButton(
                   onPressed: () {
                     _listPage(context);
                   },
-                  child: Text("CONTINUAR"))
+                  child: const Text("CONTINUAR"))
             ],
           );
         });

@@ -4,6 +4,7 @@ import 'package:rxdart/subjects.dart';
 import 'package:app/models/clasees/seller.dart';
 import 'package:app/models/clasees/buyer.dart';
 
+// This class create the methods that create the user since front flutter in the api.
 class SellerBloc {
   final _repoditory = Repository();
   final _userGetter = PublishSubject<Seller>();
