@@ -3,7 +3,7 @@
 
 [![pantallaso.png](https://i.postimg.cc/7YQT5LDq/pantallaso.png)](https://postimg.cc/N5m0VB5n)
 
-Before you start, watch the [Video](https://youtu.be/dB4hL3CZQqA) and [Blog](https://blogappholbertoncapstone.blogspot.com/2023/02/linking-farmers.html) with the app that has been developed so far.
+Before you start, watch the [Video](https://youtu.be/dB4hL3CZQqA), [Ladingpage](https://nicolas1897.github.io/vendedores/#) and [Blog](https://blogappholbertoncapstone.blogspot.com/2023/02/linking-farmers.html) with the app that has been developed so far.
 
 <details><summary> Description of the Project </summary>
 
@@ -57,9 +57,9 @@ The app works as a list of potential sellers and buyers, to access this list you
 
 <h3>Manuel E. Rodriguez C.</h3>
 
-[- Linkedin](https://img1.freepng.es/20180215/yaq/kisspng-t-shirt-face-smiley-clip-art-shocked-happy-face-5a85f6bd06d3e4.287266511518728893028.jpg)
+[- Linkedin](https://www.linkedin.com/in/manuel-esteban-rodriguez-castro-967507266/)
 
-[- Github](https://img1.freepng.es/20180215/yaq/kisspng-t-shirt-face-smiley-clip-art-shocked-happy-face-5a85f6bd06d3e4.287266511518728893028.jpg)
+[- Github](https://github.com/ManuRodriguezC)
 
 <h3>Daniel S. Lopez O.</h3>
 
